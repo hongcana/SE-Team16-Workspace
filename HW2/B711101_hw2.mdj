@@ -3050,9 +3050,9 @@
 																"$ref": "AAAAAAGA0muFnUZ+/jQ="
 															},
 															"font": "Arial;13;0",
-															"left": 40.72998046875,
+															"left": 40.45703125,
 															"top": 29,
-															"width": 90.603515625,
+															"width": 95.6943359375,
 															"height": 13,
 															"text": "Add a new item"
 														},
@@ -3065,7 +3065,7 @@
 															"font": "Arial;13;1",
 															"left": 21,
 															"top": 29,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -6270,9 +6270,9 @@
 																"$ref": "AAAAAAGA0pG92+anBtY="
 															},
 															"font": "Arial;13;0",
-															"left": 24.72998046875,
+															"left": 24.45703125,
 															"top": 13,
-															"width": 104.07958984375,
+															"width": 107.24072265625,
 															"height": 13,
 															"text": "View selling items"
 														},
@@ -6285,7 +6285,7 @@
 															"font": "Arial;13;1",
 															"left": 5,
 															"top": 13,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -9368,9 +9368,9 @@
 																"$ref": "AAAAAAGA0pqvUhEbYng="
 															},
 															"font": "Arial;13;0",
-															"left": 24.72998046875,
+															"left": 24.45703125,
 															"top": 5,
-															"width": 112.7568359375,
+															"width": 118.51416015625,
 															"height": 13,
 															"text": "View sold out items"
 														},
@@ -9383,7 +9383,7 @@
 															"font": "Arial;13;1",
 															"left": 5,
 															"top": 5,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -12201,9 +12201,9 @@
 																"$ref": "AAAAAAGA0qGNMT/9LZI="
 															},
 															"font": "Arial;13;0",
-															"left": 40.72998046875,
+															"left": 40.45703125,
 															"top": 21,
-															"width": 145.5234375,
+															"width": 147.62451171875,
 															"height": 13,
 															"text": "Serch item and purchase"
 														},
@@ -12216,7 +12216,7 @@
 															"font": "Arial;13;1",
 															"left": 21,
 															"top": 21,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -13359,9 +13359,9 @@
 																"$ref": "AAAAAAGA0qgK+EvV3ac="
 															},
 															"font": "Arial;13;0",
-															"left": 169.675048828125,
+															"left": 168.684814453125,
 															"top": 285,
-															"width": 107.64990234375,
+															"width": 109.63037109375,
 															"height": 13,
 															"alpha": 1.5707963267948966,
 															"distance": 10,
@@ -16090,10 +16090,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGA1fmD4yr1CPo="
 											},
-											"visible": false,
 											"font": "Arial;13;0",
-											"left": 160,
-											"height": 13
+											"left": 173,
+											"top": 205,
+											"width": 150,
+											"height": 13,
+											"text": "«entity»"
 										},
 										{
 											"_type": "LabelView",
@@ -16103,7 +16105,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 173,
-											"top": 207,
+											"top": 220,
 											"width": 150,
 											"height": 13,
 											"text": "Item"
@@ -16117,7 +16119,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 160,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -16138,7 +16140,7 @@
 									"left": 168,
 									"top": 200,
 									"width": 160,
-									"height": 25,
+									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA1fmD4yr2UzU="
 									},
@@ -16173,7 +16175,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 230,
+											"top": 243,
 											"width": 150,
 											"height": 13,
 											"text": "+ItemName",
@@ -16190,7 +16192,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 245,
+											"top": 258,
 											"width": 150,
 											"height": 13,
 											"text": "+ManufacturerName",
@@ -16207,7 +16209,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 260,
+											"top": 273,
 											"width": 150,
 											"height": 13,
 											"text": "+Price",
@@ -16224,7 +16226,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 275,
+											"top": 288,
 											"width": 150,
 											"height": 13,
 											"text": "+Score",
@@ -16241,7 +16243,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 290,
+											"top": 303,
 											"width": 150,
 											"height": 13,
 											"text": "+Stock",
@@ -16258,7 +16260,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 305,
+											"top": 318,
 											"width": 150,
 											"height": 13,
 											"text": "+ItemAmount",
@@ -16267,7 +16269,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 168,
-									"top": 225,
+									"top": 238,
 									"width": 160,
 									"height": 98
 								},
@@ -16292,7 +16294,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 328,
+											"top": 341,
 											"width": 150,
 											"height": 13,
 											"text": "+getItem()",
@@ -16309,7 +16311,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 343,
+											"top": 356,
 											"width": 150,
 											"height": 13,
 											"text": "+addNewItem()",
@@ -16326,7 +16328,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 358,
+											"top": 371,
 											"width": 150,
 											"height": 13,
 											"text": "+getSoldoutItems()",
@@ -16343,7 +16345,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 373,
+											"top": 386,
 											"width": 150,
 											"height": 13,
 											"text": "+changeStock()",
@@ -16352,7 +16354,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 168,
-									"top": 323,
+									"top": 336,
 									"width": 160,
 									"height": 68
 								},
@@ -16392,7 +16394,7 @@
 							"left": 168,
 							"top": 200,
 							"width": 160,
-							"height": 191,
+							"height": 204,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA1fmD4yr1CPo="
 							},
@@ -16438,7 +16440,7 @@
 											"font": "Arial;13;0",
 											"left": 405,
 											"top": 109,
-											"width": 160.3671875,
+											"width": 161.0908203125,
 											"height": 13,
 											"text": "«boundary»"
 										},
@@ -16451,7 +16453,7 @@
 											"font": "Arial;13;1",
 											"left": 405,
 											"top": 124,
-											"width": 160.3671875,
+											"width": 161.0908203125,
 											"height": 13,
 											"text": "User Interface::AddItemUI"
 										},
@@ -16465,7 +16467,7 @@
 											"font": "Arial;13;0",
 											"left": 224,
 											"top": -912,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -16486,7 +16488,7 @@
 									"font": "Arial;13;0",
 									"left": 400,
 									"top": 104,
-									"width": 170.3671875,
+									"width": 171.0908203125,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA1gPYpUVeWsc="
@@ -16513,7 +16515,7 @@
 									"font": "Arial;13;0",
 									"left": 400,
 									"top": 142,
-									"width": 170.3671875,
+									"width": 171.0908203125,
 									"height": 10
 								},
 								{
@@ -16538,7 +16540,7 @@
 											"font": "Arial;13;0",
 											"left": 405,
 											"top": 157,
-											"width": 160.3671875,
+											"width": 161.0908203125,
 											"height": 13,
 											"text": "+startInterface()",
 											"horizontalAlignment": 0
@@ -16555,7 +16557,7 @@
 											"font": "Arial;13;0",
 											"left": 405,
 											"top": 172,
-											"width": 160.3671875,
+											"width": 161.0908203125,
 											"height": 13,
 											"text": "+createNewItem()",
 											"horizontalAlignment": 0
@@ -16564,7 +16566,7 @@
 									"font": "Arial;13;0",
 									"left": 400,
 									"top": 152,
-									"width": 170.3671875,
+									"width": 171.0908203125,
 									"height": 38
 								},
 								{
@@ -16604,7 +16606,7 @@
 							"containerChangeable": true,
 							"left": 400,
 							"top": 104,
-							"width": 170.3671875,
+							"width": 171.0908203125,
 							"height": 129,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA1gPYpUVdjWE="
@@ -16648,11 +16650,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGA1gZ1Y0rbYW0="
 											},
-											"visible": false,
 											"font": "Arial;13;0",
-											"left": -192,
-											"top": -560,
-											"height": 13
+											"left": 405,
+											"top": 253,
+											"width": 169.76171875,
+											"height": 13,
+											"text": "«boundary»"
 										},
 										{
 											"_type": "LabelView",
@@ -16662,7 +16665,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 405,
-											"top": 255,
+											"top": 268,
 											"width": 169.76171875,
 											"height": 13,
 											"text": "User Interface::ShowItemUI"
@@ -16677,7 +16680,7 @@
 											"font": "Arial;13;0",
 											"left": -192,
 											"top": -560,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -16699,7 +16702,7 @@
 									"left": 400,
 									"top": 248,
 									"width": 179.76171875,
-									"height": 25,
+									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA1gZ1Y0rcvII="
 									},
@@ -16724,7 +16727,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 273,
+									"top": 286,
 									"width": 179.76171875,
 									"height": 10
 								},
@@ -16749,7 +16752,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 288,
+											"top": 301,
 											"width": 169.76171875,
 											"height": 13,
 											"text": "+startInterface()",
@@ -16766,7 +16769,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 303,
+											"top": 316,
 											"width": 169.76171875,
 											"height": 13,
 											"text": "+showSellingItem()",
@@ -16775,7 +16778,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 283,
+									"top": 296,
 									"width": 179.76171875,
 									"height": 38
 								},
@@ -16860,11 +16863,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGA1gfApE9IBk0="
 											},
-											"visible": false,
 											"font": "Arial;13;0",
-											"left": 256,
-											"top": -704,
-											"height": 13
+											"left": 405,
+											"top": 405,
+											"width": 218.13720703125,
+											"height": 13,
+											"text": "«boundary»"
 										},
 										{
 											"_type": "LabelView",
@@ -16874,7 +16878,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 405,
-											"top": 407,
+											"top": 420,
 											"width": 218.13720703125,
 											"height": 13,
 											"text": "User Interface::ShowSoldoutItemUI"
@@ -16889,7 +16893,7 @@
 											"font": "Arial;13;0",
 											"left": 256,
 											"top": -704,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -16911,7 +16915,7 @@
 									"left": 400,
 									"top": 400,
 									"width": 228.13720703125,
-									"height": 25,
+									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA1gfApE9Jbxs="
 									},
@@ -16936,7 +16940,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 425,
+									"top": 438,
 									"width": 228.13720703125,
 									"height": 10
 								},
@@ -16961,7 +16965,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 440,
+											"top": 453,
 											"width": 218.13720703125,
 											"height": 13,
 											"text": "+startInterface()",
@@ -16978,7 +16982,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 455,
+											"top": 468,
 											"width": 218.13720703125,
 											"height": 13,
 											"text": "+showSoldoutItems()",
@@ -16987,7 +16991,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 435,
+									"top": 448,
 									"width": 228.13720703125,
 									"height": 38
 								},
@@ -17072,11 +17076,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGA1gjWpFL08OU="
 											},
-											"visible": false,
 											"font": "Arial;13;0",
-											"left": -288,
-											"top": -416,
-											"height": 13
+											"left": 405,
+											"top": 549,
+											"width": 166,
+											"height": 13,
+											"text": "«boundary»"
 										},
 										{
 											"_type": "LabelView",
@@ -17086,7 +17091,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 405,
-											"top": 551,
+											"top": 564,
 											"width": 166,
 											"height": 13,
 											"text": "User Interface::ItemInfoUI"
@@ -17101,7 +17106,7 @@
 											"font": "Arial;13;0",
 											"left": -288,
 											"top": -416,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -17123,7 +17128,7 @@
 									"left": 400,
 									"top": 544,
 									"width": 176,
-									"height": 25,
+									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA1gjWpFL1Pgo="
 									},
@@ -17148,7 +17153,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 569,
+									"top": 582,
 									"width": 176,
 									"height": 10
 								},
@@ -17173,7 +17178,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 584,
+											"top": 597,
 											"width": 166,
 											"height": 13,
 											"text": "+startInterface()",
@@ -17190,7 +17195,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 599,
+											"top": 612,
 											"width": 166,
 											"height": 13,
 											"text": "+showItemInfo()",
@@ -17207,7 +17212,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 614,
+											"top": 627,
 											"width": 166,
 											"height": 13,
 											"text": "+purchaseItem()",
@@ -17216,7 +17221,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 579,
+									"top": 592,
 									"width": 176,
 									"height": 53
 								},
@@ -17331,7 +17336,7 @@
 											"font": "Arial;13;0",
 											"left": 416,
 											"top": -176,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -17543,7 +17548,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -17732,7 +17737,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"top": 16,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -17923,7 +17928,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -18083,6 +18088,7 @@
 						"$ref": "AAAAAAGAz7hJYOOQa+Q="
 					},
 					"name": "Item",
+					"stereotype": "entity",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -18090,7 +18096,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGA1fmD4yryzU8="
 							},
-							"name": "ItemName"
+							"name": "ItemName",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -18098,7 +18105,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGA1fmD4yryzU8="
 							},
-							"name": "ManufacturerName"
+							"name": "ManufacturerName",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -18106,7 +18114,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGA1fmD4yryzU8="
 							},
-							"name": "Price"
+							"name": "Price",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -18114,7 +18123,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGA1fmD4yryzU8="
 							},
-							"name": "Score"
+							"name": "Score",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -18122,7 +18132,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGA1fmD4yryzU8="
 							},
-							"name": "Stock"
+							"name": "Stock",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -18130,7 +18141,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGA1fmD4yryzU8="
 							},
-							"name": "ItemAmount"
+							"name": "ItemAmount",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -18202,6 +18214,7 @@
 						"$ref": "AAAAAAGAz7hJYOOQa+Q="
 					},
 					"name": "User Interface::ShowItemUI",
+					"stereotype": "boundary",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -18236,6 +18249,7 @@
 						"$ref": "AAAAAAGAz7hJYOOQa+Q="
 					},
 					"name": "User Interface::ShowSoldoutItemUI",
+					"stereotype": "boundary",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -18262,6 +18276,7 @@
 						"$ref": "AAAAAAGAz7hJYOOQa+Q="
 					},
 					"name": "User Interface::ItemInfoUI",
+					"stereotype": "boundary",
 					"operations": [
 						{
 							"_type": "UMLOperation",
