@@ -1,3 +1,5 @@
+[kjma8y] Wed May 18 17:08:28 2022 +0900 class 다이어그램 수정 93a1853
+[kjma8y] Wed May 18 17:04:16 2022 +0900 commit history 파일 추가 02c511e
 [kjma8y] Wed May 18 17:01:11 2022 +0900 이전 파일들 정리 5d35a0e
 [kjma8y] Wed May 18 16:51:57 2022 +0900 다이어그램들 b97232c
 [kjma8y] Wed May 18 16:50:55 2022 +0900 requirement list/use case description b9b969f
