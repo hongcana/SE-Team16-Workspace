@@ -1,0 +1,11 @@
+[kjma8y] Wed May 18 17:01:11 2022 +0900 이전 파일들 정리 5d35a0e
+[kjma8y] Wed May 18 16:51:57 2022 +0900 다이어그램들 b97232c
+[kjma8y] Wed May 18 16:50:55 2022 +0900 requirement list/use case description b9b969f
+[kjma8y] Wed May 18 16:50:15 2022 +0900 이전 파일들 정리 769df4e
+[kjma8y] Sat Apr 30 19:54:49 2022 +0900 Requirement 수정하면서 UseCase도 수정함 0a05471
+[kjma8y] Sat Apr 30 19:51:01 2022 +0900 Requirement 수정 완료 3831018
+[kjma8y] Sat Apr 30 18:22:03 2022 +0900 늦어서 죄송합니다 40e4ba3
+[kjma8y] Sat Apr 30 18:10:49 2022 +0900 늦어서 죄송합니다 660348a
+[hongcana] Wed Apr 27 20:58:32 2022 +0900 UI 추가 및 requirement 반영한 UML Update e0a7a53
+[hongcana] Mon Apr 25 22:28:12 2022 +0900 Part 3 초기버전  commit 853c6e5
+[hongcana] Fri Apr 22 14:23:02 2022 +0900 Initial commit f3fe2bd
