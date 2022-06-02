@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Team16-HW3", "..\..\..\source\repos\Team16-HW3\Team16-HW3\Team16-HW3.vcxproj", "{E643C5BC-2462-4F61-AFEB-D40F57EC213C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Team16-HW3", "Team16-HW3\Team16-HW3.vcxproj", "{E643C5BC-2462-4F61-AFEB-D40F57EC213C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

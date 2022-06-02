@@ -5,10 +5,13 @@
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 #define MAX_MEMBER 100
-
+#define _CRT_SECURE_NO_WARNINGS
 void doTask();
-void join();
-void program_exit();
+void AddNewMember();
+void MembershipWithdrawal();
+void CheckIDPW();
+void Logout();
+//void program_exit();
 
 FILE* in_fp, * out_fp;
 
@@ -26,26 +29,35 @@ int main()
 }
 class Member {
 public:
-	Member();
-	Member(char memberName, int memberResidentNumber, char memberID, char memberPW);
+
 	char memberID;
 	char memberPW;
 	char memberName;
-	int memberResidentNumber;
+	char memberResidentNumber;
+
+	Member() {
+		memberID = NULL;
+		memberPW = NULL;
+		memberName = NULL;
+		memberResidentNumber = NULL;
+
+	};
+	Member(char memberName, char memberResidentNumber, char memberID, char memberPW) {
+		memberID = memberName;
+		memberPW = memberResidentNumber;
+		memberName = memberID;
+		memberResidentNumber = memberPW;
+	};
+	/* 멤버 함수인데 당장은 필요없을듯 하다.
 	void AddMemberInformation();
 	void CheckIDPW();
 	void DeleteMemberInformation();
 	void CheckValidIDPW();
+	*/
 };
-int member_count = 0;
 int now_login_member = NULL;
-Member memberlist[MAX_MEMBER];
+Member memberlist[MAX_MEMBER] = { Member() };
 
-void AddNewMember(char memberName, int memberResidentNumber, char memberID, char memberPW);
-void ShowCheckWithdrawal();
-void MembershipWithdrawal();
-void CheckIDPW();
-void Logout();
 void doTask()
 {
 	int menu_level_1 = 0, menu_level_2 = 0;
@@ -60,13 +72,8 @@ void doTask()
 				switch (menu_level_2)
 				{
 				case 1: //1.1 회원가입
-					char name;
-					int resident_id;
-					char id;
-					char pw;
-					AddNewMember(name, resident_id,id,pw);
+					AddNewMember();
 				case 2: //1.2 회원탈퇴
-					ShowCheckWithdrawal();
 					MembershipWithdrawal();
 				}
 			case 2:
@@ -74,6 +81,7 @@ void doTask()
 				{
 				case 1: //2.1 로그인
 					CheckIDPW();
+
 				case 2: //2.2 로그아웃
 					Logout();
 				}
@@ -81,31 +89,61 @@ void doTask()
 			}
 		}
 	}
+	return;
 }
 
-void AddNewMember(char memberName, int memberResidentNumber, char memberID, char memberPW) {
-	int result = fscanf(in_fp, "%c %d %c %c", &memberName, &memberResidentNumber,&memberID, &memberPW);
-	Member member = Member(memberName, memberResidentNumber, memberID, memberPW);
-	memberlist[member_count] = member;
-	member_count += 1;
-	printf("%c %d %c %c", memberName, memberResidentNumber, memberID, memberPW);
-}
-
-
-void ShowCheckWithdrawal();
-void MembershipWithdrawal();
-void CheckIDPW(char memberID, char memberPW) {
-	int result = fscanf(in_fp, "%c %c", &memberID, &memberPW);
+void AddNewMember()
+{
+	char memberName[MAX_STRING];
+	char memberResidentNumber[MAX_STRING];
+	char memberID[MAX_STRING];
+	char memberPW[MAX_STRING];
+	fscanf(in_fp, "%s %s %s %s", memberName, memberResidentNumber, memberID, memberPW);
+	Member newmember(memberName[MAX_STRING], memberResidentNumber[MAX_STRING], memberID[MAX_STRING], memberPW[MAX_STRING]);
 	for (int i = 0; i < MAX_MEMBER;i++) {
-		if (memberlist[i].memberID == memberID && memberlist[i].memberPW == memberPW) {
-			printf("%c, %c", memberID, memberPW);
+		if (memberlist[i].memberID != NULL)
+		{
+			memberlist[i] = newmember;
+			fprintf(out_fp, "1.1 회원가입 \n");
+			fprintf(out_fp, "%s %s %s %s\n", memberName, memberResidentNumber, memberID, memberPW);
+		}
+	}
+}
+
+
+
+void MembershipWithdrawal()
+{
+	if(now_login_member > -1)
+	{	
+		fprintf(out_fp, "1.2 회원탈퇴 \n");
+		memberlist[now_login_member] = Member();
+		fprintf(out_fp, "%s\n", memberlist[now_login_member].memberID);
+		now_login_member = -1;
+	}
+}
+void CheckIDPW() {
+	char memberID[MAX_STRING];
+	char memberPW[MAX_STRING];
+	fscanf(in_fp, "%s %s", memberID, memberPW);
+	for (int i = 0; i < MAX_MEMBER;i++) 
+	{
+		if (memberlist[i].memberID == memberID && memberPW == memberlist[i].memberPW)
+		{
+			fprintf(out_fp, "2.1 로그인\n");
+			fprintf(out_fp, "%s, %s\n", memberID, memberPW);
 			now_login_member = i;
 		}
-		else
-			printf("\n");
 	}
 };
-void Logout() {
-	printf("%c", memberlist[now_login_member].memberID);
-	now_login_member = NULL;
+void Logout()
+{
+	if (now_login_member > -1)
+	{
+		fprintf(out_fp, "2.2 로그아웃 \n");
+		fprintf(out_fp, "%s\n", memberlist[now_login_member].memberID);
+		now_login_member = -1;
+	}
+	else
+		printf("현재 로그인 되지 않았습니다.");
 }
