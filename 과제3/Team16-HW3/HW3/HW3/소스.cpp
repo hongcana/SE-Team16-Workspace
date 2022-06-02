@@ -6,6 +6,7 @@
 #define OUTPUT_FILE_NAME "output.txt"
 #define MAX_MEMBER 100
 #define _CRT_SECURE_NO_WARNINGS
+
 void doTask();
 void AddNewMember();
 void MembershipWithdrawal();
@@ -128,7 +129,7 @@ void CheckIDPW() {
 	fscanf(in_fp, "%s %s", memberID, memberPW);
 	for (int i = 0; i < MAX_MEMBER;i++) 
 	{
-		if (memberlist[i].memberID == memberID && memberPW == memberlist[i].memberPW)
+		if (&memberlist[i].memberID == memberID && memberPW == &memberlist[i].memberPW)
 		{
 			fprintf(out_fp, "2.1 ·Î±×ÀÎ\n");
 			fprintf(out_fp, "%s, %s\n", memberID, memberPW);
