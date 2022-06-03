@@ -72,27 +72,134 @@ public:
 	const char* getmemberPW() const {
 		return memberPW;
 	}
-	/* 멤버 함수인데 당장은 필요없을듯 하다.
-	void AddMemberInformation();
-	void CheckIDPW();
-	void DeleteMemberInformation();
-	void CheckValidIDPW();
-	*/
 };
 
+
+
 int now_login_member = -1;
-Member memberlist[MAX_MEMBER] = { Member()};
 int count = 0;
+
+Member memberlist[MAX_MEMBER] = { Member() };
+
+class MembershipAddControl {
+public:
+	void AddNewMember(char* memberName, char* memberResidentNumber, char* memberID, char* memberPW)
+	{
+		memberlist[count].setmemberData(memberID, memberPW, memberName, memberResidentNumber);
+		count += 1;
+
+	}
+};
+
+class MembershipAddUI {
+public:
+	void AddNewMember()
+	{
+		char memberName[MAX_STRING];
+		char memberResidentNumber[MAX_STRING];
+		char memberID[MAX_STRING];
+		char memberPW[MAX_STRING];
+		fscanf(in_fp, "%s %s %s %s", memberName, memberResidentNumber, memberID, memberPW);
+		fprintf(out_fp, "1.1 회원가입 \n");
+		fprintf(out_fp, "%>s %s %s %s\n", memberName, memberResidentNumber, memberID, memberPW);
+		MembershipAddControl* membershipadd = new MembershipAddControl;
+		membershipadd->AddNewMember(memberName, memberResidentNumber, memberID, memberPW);
+	}
+};
+
+class MembershipWithdrawalControl {
+public:
+	void MembershipWithdrawal()
+	{
+		
+		if (now_login_member > -1)
+		{
+			memberlist[now_login_member] = Member();
+			now_login_member = -1;
+		}
+	}
+
+};
+class MembershipWithdrawalUI {
+public:
+	void MembershipWithdrawal() {
+		fprintf(out_fp, "1.2 회원탈퇴 \n");
+		const char* ID = memberlist[now_login_member].getmemberID();
+		fprintf(out_fp, ">%s\n", ID);
+		MembershipWithdrawalControl* membershipwithdrawal = new MembershipWithdrawalControl;
+		membershipwithdrawal->MembershipWithdrawal();
+	}
+};
+class LogInControl {
+public:
+	void CheckIDPW(char* memberID, char* memberPW) {
+		for (int i = 0; i < MAX_MEMBER;i++)
+		{
+			const char* ID = memberlist[i].getmemberID();
+			const char* PW = memberlist[i].getmemberPW();
+			if (strcmp(ID, memberID) == 0)
+			{
+				if (strcmp(PW, memberPW) == 0)
+				{
+					fprintf(out_fp, ">%s, %s\n", memberID, memberPW);
+					now_login_member = i;
+					break;
+				}
+			}
+		}
+	};
+};
+
+
+class LogInUI {
+public:
+	void CheckIDPW() {
+
+		char memberID[MAX_STRING];
+		char memberPW[MAX_STRING];
+		fprintf(out_fp, "2.1 로그인\n");
+		fscanf(in_fp, "%s %s", memberID, memberPW);
+		LogInControl* login = new LogInControl;
+		login->CheckIDPW(memberID, memberPW);
+	}
+};
+class LogoutControl {
+public:
+	void Logout()
+	{
+		if (now_login_member > -1)
+		{
+			fprintf(out_fp, ">%s\n", memberlist[now_login_member].getmemberID());
+			now_login_member = -1;
+		}
+
+	}
+};
+class LogoutUI {
+public:
+	void Logout() {
+		fprintf(out_fp, "2.2 로그아웃 \n");
+		LogoutControl* logout = new LogoutControl;
+		int dummy = 0;
+		logout->Logout();
+	}
+};
 void doTask()
 {
 	int menu_level_1 = 0, menu_level_2 = 0;
 	int is_program_exit = 0;
+
 	while (!is_program_exit) {
 		int result = fscanf(in_fp, "%d %d", &menu_level_1,&menu_level_2);
 		if (result == EOF) {
 			is_program_exit = 1;
 			return;
 		}
+		MembershipAddUI membershipaddUI;
+		MembershipWithdrawalUI membershipwithdrawalUI;
+		LogInUI loginUI;
+		LogoutUI logoutUI;
+
 		switch (menu_level_1)
 		{
 			case 1:
@@ -100,10 +207,10 @@ void doTask()
 				switch (menu_level_2)
 				{
 				case 1: //1.1 회원가입
-					AddNewMember();
+					membershipaddUI.AddNewMember();
 					break;
 				case 2: //1.2 회원탈퇴
-					MembershipWithdrawal();
+					membershipwithdrawalUI.MembershipWithdrawal();
 					break;
 				}
 				break;
@@ -111,11 +218,11 @@ void doTask()
 				switch (menu_level_2)
 				{
 				case 1: //2.1 로그인
-					CheckIDPW();
+					loginUI.CheckIDPW();
 					break;
 
 				case 2: //2.2 로그아웃
-					Logout();
+					logoutUI.Logout();
 					break;
 				}
 				break;
@@ -125,69 +232,8 @@ void doTask()
 	return;
 }
 
-void AddNewMember()
-{
-	char memberName[MAX_STRING];
-	char memberResidentNumber[MAX_STRING];
-	char memberID[MAX_STRING];
-	char memberPW[MAX_STRING];
-	fscanf(in_fp, "%s %s %s %s", memberName, memberResidentNumber, memberID, memberPW);
-	memberlist[count].setmemberData(memberID, memberPW, memberName, memberResidentNumber);
-	fprintf(out_fp, "1.1 회원가입 \n");
-	fprintf(out_fp, "%>s %s %s %s\n", memberName, memberResidentNumber, memberID, memberPW);
-	printf("1.1 회원가입 \n");
-	printf(">%s %s %s %s\n", memberName, memberResidentNumber, memberID, memberPW);
-	count += 1;
-		
-	
-}
 
 
 
-void MembershipWithdrawal()
-{
-	fprintf(out_fp, "1.2 회원탈퇴 \n");
-	if(now_login_member > -1)
-	{	
-		printf("1.2 회원탈퇴 \n");
-		const char* ID = memberlist[now_login_member].getmemberID();
-		printf(">%s\n", ID);
-		fprintf(out_fp, ">%s\n", ID);
-		memberlist[now_login_member] = Member();
-		now_login_member = -1;
-	}
-}
-void CheckIDPW() {
-	char memberID[MAX_STRING];
-	char memberPW[MAX_STRING];
-	fprintf(out_fp, "2.1 로그인\n");
-	printf("2.1 로그인\n");
-	fscanf(in_fp, "%s %s", memberID, memberPW);
-	for (int i = 0; i < MAX_MEMBER;i++)
-	{
-		const char* ID = memberlist[i].getmemberID();
-		const char* PW = memberlist[i].getmemberPW();
-		if (strcmp(ID, memberID) == 0) 
-		{
-			if(strcmp(PW, memberPW)==0)
-			{
-			fprintf(out_fp, ">%s, %s\n", memberID, memberPW);
-			printf("> %s, %s\n", memberID, memberPW);
-			now_login_member = i;
-			break;
-			}
-		}
-	}
-};
-void Logout()
-{
-	fprintf(out_fp, "2.2 로그아웃 \n");
-	if (now_login_member > -1)
-	{
-		fprintf(out_fp, ">%s\n", memberlist[now_login_member].getmemberID());
-		printf("2.2 로그아웃 \n");
-		printf(">%s\n", &memberlist[now_login_member].memberID);
-		now_login_member = -1;
-	}
-	
-}
+
+
