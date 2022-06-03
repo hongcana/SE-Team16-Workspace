@@ -12,7 +12,6 @@
 
 // 함수 선언
 void doTask();
-void join();
 
 // 변수 선언
 FILE* in_fp;
@@ -124,11 +123,8 @@ int main()
         {
             switch (menu_level_2)
             {
-            case 1:   // "1.1. 회원가입“ 메뉴 부분
+            case 1:
             {
-                // join() 함수에서 해당 기능 수행 
-                join();
-
                 break;
             }
             case 2:
@@ -174,22 +170,3 @@ int main()
 }
 
 void doTask() {}
-
-void join()
-{
-    char user_type[MAX_STRING], name[MAX_STRING], SSN [MAX_STRING],
-        address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
-
-    // 입력 형식 : 이름, 주민번호, ID, Password를 파일로부터 읽음
-    fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
-
-    // 해당 기능 수행  
-
-    // 출력 형식
-    fprintf(out_fp, "1.1. 회원가입\n");
-    fprintf(out_fp, "%s %s %s %s\n", name, SSN, ID, password);
-}
-
-
-
-
