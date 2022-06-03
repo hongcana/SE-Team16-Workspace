@@ -15,13 +15,15 @@ item* item::GetItem()
 		return this;
 }
 
-void item::AddNewItem(char* SellerName, char* ItemName, char* ManufacturerName, int Price, int Stock)
+void item::AddNewItem(const char* SellerName, char* ItemName, char* ManufacturerName, int Price, int Stock)
 {
 	strcpy_s(this->SellerName, MAX_STRING, SellerName);
 	strcpy_s(this->ItemName, MAX_STRING, ItemName);
 	strcpy_s(this->ManufacturerName, MAX_STRING, ManufacturerName);
 	this->Price = Price;
-	this->Score = 0;
+	this->meanScore = 0;
+	memset(this->Score, 0, sizeof(this->Score));
+	this->ScoreCount = 0;
 	this->Stock = Stock;
 	this->ItemAmount = 0;
 }
@@ -52,9 +54,15 @@ int item::GetPrice()
 	return this->Price; 
 }
 
-int item::GetScore() 
+float item::GetMeanScore() 
 {
-	return this->Score; 
+	float sum = 0;
+	for (int i = 0; i < this->ScoreCount; i++)
+		sum += this->Score[i];
+	if (sum != 0)
+		return sum / this->ScoreCount;
+	else
+		return 0;
 }
 
 int item::GetStock() 
@@ -85,4 +93,10 @@ void item::SetPrevItem(item* target)
 void item::SetNextItem(item* target)
 {
 	this->nextItem = target;
+}
+
+void item::AddScore(int Score)
+{
+	this->Score[this->ScoreCount] = Score;
+	this->ScoreCount++;
 }
